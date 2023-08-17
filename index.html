@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Derrick Cruz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/92b287853d.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <script src="particles.js" defer></script>
+</head>
+<body>
+<div id="preloader"></div>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" id="icon">
+            <audio id="mySong">
+                <source src="images/fallen.mp3" type="audio/mp3">
+            </audio>
+
+            <script>
+                var mySong = document.getElementById("mySong")
+                var icon = document.getElementById("icon")
+                icon.onclick = function () {
+                    if (mySong.paused) {
+                        mySong.play();
+                        icon.src = "images/logo.png"
+                    } else {
+                        mySong.pause();
+                        icon.src = "images/logo1.png"
+                    }
+                }
+            </script>
+            <ul id="sidemenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Skills</a></li>
+                <li><a href="#slider">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+</div>
+<!-- --------------------Home------------>
+<div class="home-text">
+    <div class="margin-box">
+        <div class="home-icons">
+            <a href="https://www.facebook.com/mmkddk17" target="_blank"><i class="fab fa-facebook"></i></a>
+                            
+                <a href="https://www.instagram.com/cdderrick07/" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/christianderrickcruz/" target="_blank"><i
+                                    class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/rapsyplay" target="_blank"><i class="fa-brands fa-steam"></i></a>
+        </div>
+        <canvas id="home"></canvas>
+        <div class="text-overlay">
+            <p>Network Engineer</p>
+            <h1>Hi, I'm <span> Christian Derrick Cruz, CpE</span></h1>
+        </div>
+        
+    </div>
+</div>
+<!-- ----------about--------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/derrickkk.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About <span>Me</h1></span>
+                <p>During his teenage years, Derrick was the guy that other students turned to
+                    with their technical issues like computers, cellphones, and other devices.
+                    He was always the person to turn to when there was a technical issue.
+                    <br>
+                    <br>
+                    Today, not much has changed. He is still dealing with technical issues.
+
+                    The difference now is that he works for a corporate firm, where he utilizes his technical skills
+                    to support clients and gain knowledge under supervision.
+                    He is preparing to be a Cloud Engineer.
+                    <br>
+                    <br>
+                    When he is not sitting on his desk, Derrick enjoy playing with his 3 dogs. He also love playing
+                    recreational
+                    activities like swimming, hiking, cycling, photography and he is active
+                    playing sports like badminton and Dualthlon. His passion for music led him to
+                    play guitar and drums in high school. When he was in college,
+                    he played in a band, and now he plays in a church band.
+                    <br>
+                    <br>
+                    "Never Give up on what you really want to do. The person with big dreams is more powerful
+                    than the one with all the facts" - Albert Einstein
+                    <!-- He also a dog lover. He treated his dogs like a family.
+                    The bond between him and his dogs is like no other. They are his companions, always along 
+                    for the ride no matter whats up and downs life brings. --></p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('skills')">Project</p>
+                        <p class="tab-links" onclick="opentab('certification')">Certification</p>
+                </div>
+                <div class="tab-contents active-tab" id="education">
+                    <ul>
+                        <li><span>2016</span><br>BS Computer Engineering at Baliuag University</li>
+                        <li><span>2014</span><br>BS Computer Engineering at Bulacan State University</li>
+                        <li><span>2012</span><br>Computer Hardware Servicing at Tesda</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="skills">
+                    <ul>
+                        <li><span>2019 </span><br>Improved System for the Payroll of Kopi Kenyo Restaurant<br>
+                        <li><span>2018 </span><br>GSM Based Digital Bulletin Board Using Raspberry Pi 3<br>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2022 - Current </span><br>IT Specialist at Sales Rain BPO Inc. — Ortigas<br></li>
+                        <li><span>2020 - 2022</span><br>Cargo Processor at Eagle Cement Corporation — Bulacan</li>
+                        <li><span>2019 - 2019</span><br>Internship at Shore360 Inc. — Pampanga</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-contents" id="certification">
+                    <ul>
+                        <li><span>Certificates</span><br>• Computer Hardware Servicing NCII<br>
+                            • Cloud Computing and Android Programming<br>
+                            • The Future of Computing<br>• Unity Game Development<br>• RESTful Web Services and Web
+                            Sockets<br>
+                            • Vulnerability Assesment and Penetration Testing<br>• How to Web: An Introduction to
+                            Web
+                            Programming using PHP7 and MySQL<br>• TuklasIN: Startup Bootcamp "Discovering Solutions,
+                            Creating
+                            Innovations"<br>
+                            • Commanding Hobbyist: Programming with Arduino<br>• A Microservice Architectural in
+                            Financial Service<br>
+                            • CCNA Routing and Switching: Introduction to Networks<br>• Introduction to Cloud: An
+                            Agile
+                            and Flexible Computing Service<br>
+                            • AWS: Intro to Cloud<br>• AWS Cloud Security Best Practices<br>• A Journey to becoming
+                            an AWS
+                            Certified Cloud Practitioner<br>
+                            • Introduction to Cloud: An Overview to AWS Cloud Services<br>• Getting Started with
+                            Amazon
+                            DynamoDB<br>• Automating your AWS Infrastructure</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+<!-- -----------------services------------>
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My <span>Services</h1></span>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-globe"></i>
+                <h2>Networking</h2>
+                <p>Cisco • Firewall Configuration and Management • Physical and Logical Topology •
+                    Maintaining Network Infrastructure • Routing and Switching Protocol •
+                    Network Design & Architecture • Network Security • WAN / LAN Technologies •
+                    Network Monitoring & Troubleshooting Tools • Proficient in IPV4 Protocols • OSI & TCP/IP •
+                    Access Point • Configure and Manages VLANS • Experience in Executing Medium to Large-Scale
+                    Network
+                    Infrastructure • Subnetting • Firewall (Pfsense, Watch Guard, Fortinet, Cato)</p>
+                <a href="https://www.roberthalf.com.au/employers/it-technology/network-engineer-jobs"
+                    target="_blank"><u>Learn more</u></a>
+            </div>
+            <div>
+                <i class="fa-sharp fa-solid fa-microchip"></i>
+                <h2>Hardware</h2>
+                <p>Network Configuration and Security • System Administration •
+                    Technical Support and Troubleshooting • Repairing Computers •
+                    Hardware Development, Analysis and Testing • Software Installation •
+                    Connecting Networks and Servers • Building Computers • Maintaining IT Infrastructure •
+                    Biometrics Configuration • CCTV Installation • Access Point Installation • Basic Troubleshooting
+                    of Different Printers • Cable Installation • Monitoring and Managing of Incident</p>
+                <a href="https://www.betterteam.com/technical-support-job-description" target="_blank"><u>Learn
+                        more</u></a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Software</h2>
+                <p>Operating System (Windows, Linux, MAC, Android, Ios) • Server (Windows Server, Linux Server) •
+                    Basic Web Tools
+                    (HTML, CSS, Boot Strap and Java Script) • Web Server (NGINX, Apache) • Basic Programming (C++, Visual Basic,
+                    Java, Python, Arduino Uno) •
+                    Proficient in Microsoft Office • Visual Graphics and Design • Picture & Video Editing • AutoCAD
+                    2D & 3D • Assembly Language • Active Directory • Windows Server Update Services •
+                    Server Virtualization (Hyper-V, VMWare and Sand Box) </p>
+                <a href="https://www.prospects.ac.uk/job-profiles/software-engineer#:~:text=research%2C%20design%20and%20write%20new,and%20identifying%20areas%20for%20modification"
+                    target="_blank"><u>Learn more</u></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------portfolio--------------- -->
+<div id="slider">
+    <div class="container"></div>
+        <hi class="sub-title">My <span>Life</span></hi>
+        <div class="wrapper">
+            <!--- <i id="left" class="fa-solid fa-angle-left"></i>     
+          <i class="fa-solid fa-angle-right"></i> -->
+            <ul class="carousel">
+                <li class="card">
+                    <div class="img"><img src="images/family.jpeg" alt="img" draggable="false"></div>
+                 </li>
+                 <li class="card">
+                    <div class="img"><img src="images/occ.jpg" alt="img" draggable="false"></div>
+                 </li>
+                 <li class="card">
+                    <div class="img"><img src="images/iteam.JPG" alt="img" draggable="false"></div>
+                 </li>
+                 <li class="card">
+                    <div class="img"><img src="images/friends.jpg" alt="img" draggable="false"></div>
+                 </li>
+                 <li class="card">
+                    <div class="img"><img src="images/band.jpg" alt="img" draggable="false"></div>
+                 </li>
+                 <li class="card">
+                    <div class="img"><img src="images/yuki.jpg" alt="img" draggable="false"></div>
+                 </li>
+                 <li class="card">
+                    <div class="img"><img src="images/server.jpg" alt="img" draggable="false"></div>
+                 </li>
+                 <li class="card">
+                    <div class="img"><img src="images/cisco.jpg" alt="img" draggable="false"></div>
+                 </li>
+                 <li class="card">
+                    <div class="img"><img src="images/car.jpg" alt="img" draggable="false"></div>
+                 </li>
+                 <li class="card">
+                    <div class="img"><img src="images/bike.jpg" alt="img" draggable="false"></div>
+                 </li>
+                 <li class="card">
+                    <div class="img"><img src="images/yuki1.jpeg" alt="img" draggable="false"></div>
+                 </li>
+                 <li class="card">
+                    <div class="img"><img src="images/zoo.jpg" alt="img" draggable="false"></div>
+                 </li>
+                 <li class="card">
+                    <div class="img"><img src="images/pizza.jpg" alt="img" draggable="false"></div>
+                 </li>
+                 <li class="card">
+                    <div class="img"><img src="images/fish.jpeg" alt="img" draggable="false"></div>
+                 </li>
+                 <li class="card">
+                    <div class="img"><img src="images/ride.jpg" alt="img" draggable="false"></div>
+                 </li>
+                 <li class="card">
+                    <div class="img"><img src="images/guitar.jpg" alt="img" draggable="false"></div>
+                 </li>
+                 <li class="card">
+                    <div class="img"><img src="images/malo.jpg" alt="img" draggable="false"></div>
+                 </li>
+                 <li class="card">
+                    <div class="img"><img src="images/bikebike.jpg" alt="img" draggable="false"></div>
+                 </li>
+                 <li class="card">
+                    <div class="img"><img src="images/giant.jpg" alt="img" draggable="false"></div>
+                 </li>
+            </ul>
+        </div>    
+</div>
+<!-- ---------------contact--------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact <span>Me</span></h1>
+                <div class="icon">
+                    <p><i class="fa-solid fa-paper-plane"></i>derrick@salesrain.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+63 9760377653</p>
+                </div>
+
+                <div class="social-icons">
+                            <a href="https://www.facebook.com/mmkddk17" target="_blank"><i class="fab fa-facebook"></i></a>
+                            
+                            <a href="https://www.instagram.com/cdderrick07/" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/christianderrickcruz/" target="_blank"><i
+                                    class="fab fa-linkedin"></i></a>
+                            <a href="https://www.facebook.com/rapsyplay" target="_blank"><i class="fa-brands fa-steam"></i></a>
+                </div>
+
+                <a href="images/CV - Christian Derrick Cruz.pdf" download class="btn btn3">Download CV</a>
+            </div>
+
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+
+                </form>
+            </div>     
+        </div>
+        <div class="footer">
+            <div class="copyright">
+                <p>The content of this website is for fun only and has been created out of boredom. <br> © 2023 All rights
+                    reserved</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+
+
+</script>
+
+<script>
+
+    var loader = document.getElementById("preloader");
+
+    window.addEventListener("load", function(){
+        loader.style.display = "none";
+    })
+
+</script>
+
+</body>
+</html>
